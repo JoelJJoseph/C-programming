@@ -1,0 +1,6 @@
+Write a program in c language to read a sentence and do the following tasks
+1) Find the length of the sentence (Without using the built in functions)
+2) Find number of words in the sentence
+3) To check whether a given word is present in the sentence.
+4) To display the count of vowels in the sentence.
+5) To display the count of each word in the sentence

@@ -1,0 +1,93 @@
+#include <stdio.h>
+
+void leng()
+{
+  char s[1000];
+  int c = 0;
+
+  printf("Input a string\n");
+  gets(s);
+
+  while (s[c] != '\0')
+    c++;
+
+  printf("Length of the string: %d\n", c-1);
+
+  return 0;
+}
+
+
+void no_of_string()
+{
+  char s[1000];
+  int c = 1;
+
+  printf("Input a string\n");
+  gets(s);
+
+  for (int i = 0;s[i] != '\0';i++)
+    {
+        if (s[i] == ' ')
+        c++;
+	}
+  
+ printf("Number of words in given string are: %d\n", c);
+}
+
+
+
+int vowel()
+{
+  int c = 0, count = 0;
+  char s[1000];
+
+  printf("Input a string\n");
+  fflush(stdin);
+  gets(s);
+
+  while (s[c] != '\0') {
+    if (s[c] == 'a' || s[c] == 'A' || s[c] == 'e' || s[c] == 'E' || s[c] == 'i' || s[c] == 'I' || s[c] =='o' || s[c]=='O' || s[c] == 'u' || s[c] == 'U')
+      count++;
+    c++;
+  }
+
+  printf("Number of vowels in the string: %d", count-1);
+
+  return 0;
+}
+
+
+
+
+int count_sent()
+{
+	int i,count=0;
+	   char c,str[100];
+	   printf("Enter a sentence\n");
+	   gets(str);
+	   printf("Enter a character to check how many times it is repeating\n");
+	   scanf("%c",&c);
+	   for(i=0;i<strlen(str);i++){
+	      if(str[i]==c){
+	         count++;
+	      }
+	   }
+   printf("Letter %c repeated %d times\n",c,count);
+}
+
+void main()
+{
+	
+	count_sent();
+	
+	vowel();
+	
+	printf("\n");
+	
+	no_of_string();
+	
+	printf("\n");
+	
+	leng();
+}
+
