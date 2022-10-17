@@ -1,0 +1,8 @@
+Create a structure to store the employee payroll data: name, department,  date of birth, date of joining and basic salary. Write a C language program to create an array of structures to store the details of 5 employees and print the payroll of the employees. The payroll should contain the basic information about the employee, allowances, deductions, total pay(Basic pay + allowances) and net pay(Total pay- deductions).
+Allowances
+Dearness Allowance - 15% of basic pay
+House rent allowance - 10% of basic pay
+Research Allowance - Rs. 2700/-
+Deductions
+Provident Fund - Rs. 2000/-
+Professional Tax - Rs 300/-

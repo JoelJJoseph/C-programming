@@ -1,0 +1,75 @@
+#include<stdio.h>
+int n;
+struct Date
+{
+  int mm,dd,yy;
+};
+struct employee
+{
+    char    name[30],dept[30];
+    int     empId;
+    float   salary,totalpay,ded;
+    struct Date DOB,DOJ;
+    
+};
+
+
+int main()
+{
+    printf("Enter number of Employee ");
+    scanf("%d",&n);
+    struct employee emp[n];
+     
+    printf("Enter %d Student Details \n \n",n);
+    for(int i=0; i<n; i++)
+	{
+	    printf("\nEnter details :\n");
+	    printf("Name ?:");   
+		fflush(stdin);       
+		gets(emp[i].name);
+	    printf("ID ?:");            
+		scanf("%d",&emp[i].empId);
+		printf("\nEnter Date of Joining\n ");
+	    printf("(dd-mm-yy) : ");
+	    scanf("%d-%d-%d", &emp[i].DOJ.dd,&emp[i].DOJ.mm,&emp[i].DOJ.yy);
+	    printf("\nEnter Date of birth\n ");
+	    printf("(dd-mm-yy) : ");
+	    scanf("%d-%d-%d", &emp[i].DOB.dd,&emp[i].DOB.mm,&emp[i].DOB.yy);
+	    printf("Salary ?:");        
+		scanf("%f",&emp[i].salary);
+	    emp[i].totalpay=emp[i].salary+(emp[i].salary*0.015)+2700;
+	    emp[i].ded=emp[i].totalpay-2300;
+	}
+	
+	printf("-------------- All Employee Details ---------------\n");
+    for(int i=0; i<n; i++) 
+	{
+		
+	      
+	    printf("\nEntered detail is: \n");
+	    printf("Name: %s\n"   ,emp[i].name);
+	    printf("Id: %d\n"     ,emp[i].empId);
+	    printf("\nEnter DOJ      : %d-%d-%d", emp[i].DOJ.dd,emp[i].DOJ.mm,emp[i].DOJ.yy);
+	    printf("\nEnter DOB      : %d-%d-%d\n", emp[i].DOB.dd,emp[i].DOB.mm,emp[i].DOB.yy);
+	    printf("Salary: %f\n",emp[i].salary);
+	    printf("\n");
+	    printf("\tAllowances: \n");
+	    printf("\n");
+	    printf("Dearness Allowance: %f\n",emp[i].salary+emp[i].salary*0.15);
+	    printf("House rent allowance: %f\n",emp[i].salary+emp[i].salary*0.10);
+	    printf("Research Allowance: %f\n",emp[i].salary+2700);
+	    printf("\n");
+	    printf("Total Pay: %f\n",emp[i].totalpay);
+	    printf("\n");
+	    printf("\tDeductions: \n");
+	    printf("\n");
+		printf("Provident Fund: %f\n",emp[i].totalpay-2000); 
+		printf("Professional Tax: %f\n",emp[i].totalpay-300); 
+		printf("\n");
+		printf("------------------------------------------------\n");
+	    printf("Net Pay: %f\n",emp[i].ded);
+	    printf("------------------------------------------------");
+	}
+    
+    return 0;
+}
