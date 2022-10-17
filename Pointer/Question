@@ -1,0 +1,5 @@
+Write a menu driven C program to print the following using pointers and functions
+a, Print all the alphabets
+b, Couting the vowels and consonants ( Count as well as letters)
+c, Reversing a string
+[Strictly MENU DRIVEN and POINTERS]
